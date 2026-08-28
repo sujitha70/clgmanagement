@@ -58,6 +58,23 @@ app.use(express.urlencoded({ extended: true }));
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
+// Root API welcome endpoint
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    name: '🎓 CampusResolve College Grievance Engine API',
+    version: '1.0.0',
+    health: '/api/health',
+    endpoints: {
+      auth: '/api/auth',
+      complaints: '/api/complaints',
+      admin: '/api/admin',
+      analytics: '/api/analytics',
+      notifications: '/api/notifications'
+    }
+  });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
