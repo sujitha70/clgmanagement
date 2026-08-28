@@ -93,9 +93,9 @@ To allow Render's cloud servers to connect to your MongoDB cluster:
 2. Click **Add New...** ➔ Select **Project**.
 3. Import your `campus-resolve` repository from GitHub.
 4. In the configuration screen:
-   - **Project Name**: `campus-resolve`
    - **Framework Preset**: `Next.js`
-   - **Root Directory**: Click **Edit** ➔ Select `client` ➔ Click **Continue**.
+   - **Root Directory**: Set to `client` *(under Settings > Build & Deployment)*
+   - **Build Command**: Default (`next build` — Keep overrides OFF)
 5. Expand **Environment Variables** and add:
 
    | Variable Key | Value |
